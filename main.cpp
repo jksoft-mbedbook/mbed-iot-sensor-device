@@ -8,7 +8,7 @@
 // センサデバイス固有ID
 #define ID                      "1"
 // HerokuのApp name
-#define HEROKU_APP_NAME         "sensor-data-hub"
+#define HEROKU_APP_NAME         "heroku-app-name"
 
 BME280 sensor(I2C_SDA, I2C_SCL);
 
@@ -33,7 +33,7 @@ char* float_to_char(char* c,float value, int number_of_digits)
 
 int main() {
     int status;
-    
+
     printf("Connect to network\n");
     network = NetworkInterface::get_default_instance();
     if (network == NULL) {
