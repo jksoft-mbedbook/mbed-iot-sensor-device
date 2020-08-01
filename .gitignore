@@ -1,0 +1,7 @@
+BUILD
+.mbed
+mbed-os
+BME280
+mbed-http
+picojson
+esp32-driver
