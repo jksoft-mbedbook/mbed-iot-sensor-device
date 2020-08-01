@@ -1,0 +1,54 @@
+{
+    "target_overrides": {
+        "*": {
+            "nsapi.default-wifi-security"               : "WPA_WPA2",
+            "nsapi.default-wifi-ssid"                   : "\"SSID\"",
+            "nsapi.default-wifi-password"               : "\"PASS\"",
+            "nsapi.default-cellular-apn"                : "\"APN\"",
+            "nsapi.default-cellular-sim-pin"            : "\"PIN\"",
+            "nsapi.default-cellular-username"           : "\"USERNAME\"",
+            "nsapi.default-cellular-password"           : "\"PASSWORD\""
+
+        },
+        "K64F": {
+            "target.network-default-interface-type"     : "ETHERNET"
+        },
+        "NUCLEO_F429ZI": {
+            "target.network-default-interface-type"     : "ETHERNET"
+        },
+        "NUCLEO_L432KC": {
+            "target.network-default-interface-type"     : "WIFI",
+            "esp8266.provide-default"                   : true,
+            "esp8266.tx"                                : "D1",
+            "esp8266.rx"                                : "D0",
+            "esp8266.rst"                               : "D2",
+            "target.c_lib"                              : "std"
+        },
+        "GR_LYCHEE": {
+            "target.network-default-interface-type"     : "WIFI",
+            "target.components_add"                     : ["WIFI_ESP32"]
+        },
+        "WIO_3G": {
+            "target.network-default-interface-type"     : "CELLULAR",
+            "nsapi.default-cellular-plmn"               : 0,
+            "cellular.use-apn-lookup"                   : false,
+            "cellular.debug-at"                         : false,
+            "lwip.ipv4-enabled"                         : true,
+            "lwip.ethernet-enabled"                     : false,
+            "lwip.ppp-enabled"                          : true,
+            "lwip.tcp-enabled"                          : true,
+            "lwip.pbuf-pool-size"                       : 16,
+            "lwip.mem-size"                             : 12500
+        },
+        "UHURU_RAVEN": {
+            "target.network-default-interface-type"     : "WIFI",
+            "target.components_add"                     : ["WIFI_ESP32"],
+            "esp32.wifi-debug"                          : false,
+            "esp32.wifi-en"                             : "PB_12",
+            "esp32.wifi-io0"                            : "PB_13",
+            "esp32.wifi-tx"                             : "PB_14",
+            "esp32.wifi-rx"                             : "PB_15",
+            "esp32.provide-default"                     : true
+        }
+    }
+}
